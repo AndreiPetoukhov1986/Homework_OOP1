@@ -33,6 +33,6 @@ public class Main {
         System.out.println(slytherin3);
         Slytherin.bestStudentFaculty(slytherin1, slytherin2);
 
-        Hogwarts.bestStudentHogwarts(slytherin2, ravenclaw3);
+       slytherin1.bestStudentHogwarts(ravenclaw3);
     }
 }

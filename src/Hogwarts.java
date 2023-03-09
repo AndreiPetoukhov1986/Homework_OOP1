@@ -17,14 +17,19 @@ public class Hogwarts {
     public int getTransgressionDistance(){
         return transgressionDistance;
     }
-    public static void bestStudentHogwarts(Hogwarts gryffindor1, Hogwarts gryffindor2) {
-        int sumStudent1 = gryffindor1.getPowerOfMagic() + gryffindor1.getTransgressionDistance();
-        int sumStudent2 = gryffindor2.getPowerOfMagic() + gryffindor2.getTransgressionDistance();
+    private int a(){
+        return powerOfMagic+transgressionDistance;
+    }
+    public void bestStudentHogwarts(Hogwarts hogwarts) {
+        int sumStudent1 = this.a();
+        int sumStudent2 = hogwarts.a();
         if (sumStudent1 > sumStudent2) {
-            System.out.println(gryffindor1.getFullName()+" обладает бОльшей мощностью магии и расстоянию трансгрессии, чем "+gryffindor2.getFullName());
+            System.out.println(this.getFullName()+" обладает бОльшей мощностью магии и расстоянием трансгрессии, чем "+hogwarts.getFullName());
         }
-        else {
-            System.out.println(gryffindor2.getFullName()+" обладает бОльшей мощностью магии и расстоянию трансгрессии, чем "+gryffindor1.getFullName());
+        else if (sumStudent2 > sumStudent1){
+            System.out.println(hogwarts.getFullName()+" обладает бОльшей мощностью магии и расстоянием трансгрессии, чем "+this.getFullName());
+        } else {
+            System.out.println(hogwarts.getFullName()+" обладает одинаковой мощностью магии и расстоянием трансгрессии, как и "+this.getFullName());
         }
     }
 
